@@ -11,7 +11,7 @@ function iniciarEventos() {
     $("#btnSec1").click(btnSeccion1);
     $("#btnSec2").click(btnSeccion2);
     $("#btnSec3").click(btnSeccion3);
-    $("#btnSec3").addClass("oculto");
+    //$("#btnSec3").addClass("oculto");
    
 }
 function login() {
@@ -24,6 +24,8 @@ function login() {
         if (($("#user").val() === "admin") && ($("#pass").val() === "1234")){
              $("#tabSec3").removeClass("oculto");
              //alert("El usuario o la contraseña no son correctos. Intentelo nuevamente.");
+        }else {
+            $("#tabSec3").addClass("oculto");
         }
          $("#user").val("");
          $("#pass").val("");
