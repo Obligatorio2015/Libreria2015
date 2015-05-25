@@ -12,10 +12,12 @@ function iniciarEventos() {
     $("#btnSec2").click(btnSeccion2);
     $("#btnSec3").click(btnSeccion3);
   
+  
+         
     
     
 }
-function login() {
+function login(){
 
     if (($("#user").val() === "admin") && ($("#pass").val() === "1234") || ($("#user").val() === "susana") && ($("#pass").val() === "susana")) {
 
@@ -67,3 +69,4 @@ function btnSeccion3 (){
     $("#btnSec1").removeClass("active");
 }
 //-------------------------------fin funcion secciones------------------
+
