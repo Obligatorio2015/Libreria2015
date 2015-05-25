@@ -12,7 +12,8 @@ function iniciarEventos() {
     $("#btnSec2").click(btnSeccion2);
     $("#btnSec3").click(btnSeccion3);
     //$("#btnSec3").addClass("oculto");
-   
+    
+    
 }
 function login() {
 
