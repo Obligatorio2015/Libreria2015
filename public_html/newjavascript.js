@@ -11,6 +11,7 @@ function iniciarEventos() {
     $("#btnSec1").click(btnSeccion1);
     $("#btnSec2").click(btnSeccion2);
     $("#btnSec3").click(btnSeccion3);
+    
   
   
          
