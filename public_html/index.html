@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Título de la aplicación</title>
+        <title>Libreria Puro Cuento</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="jquery.js"></script>
-        <script type="text/javascript" src="newjavascript.js"></script> 
+        <script type="text/javascript" src="PuroCuento.js"></script> 
 
+    
     </head>
+    
     <body>
+   
         <!--/<div class="main"> fix para ie8 -->
         <div class="main_resize clearfix"><!-- sitio completo -->
             <div class="header clearfix"><!-- cabezal -->
                 <div class="clearfix">
                     <div class="logo">
-                        <h1>Nombre de la App</h1>
+                        <h1>Libreria Puro Cuento</h1>
+
                     </div>
                     <div id="login">
 
@@ -33,23 +37,17 @@
                     <div class="menu">
                         <ul >
                             <!-- el atributo class con valor active marca la selección de la sección actual -->
-                            <li><a id ="btnSec1" href="#seccion1" class="active"><span>Secci&oacute;n 1</span></a></li>
+                            <li><a id ="btnSec1" href="#seccion1" class="active"><span>Inicio</span></a></li>
                             <li><a id ="btnSec2" href="#seccion2" ><span  id="tabSec2" >Secci&oacute;n 2</span></a></li>
-                            <li><a id ="btnSec3" href="#seccion3"><span id="tabSec3" class="oculto"> Revistas</span></a></li>
-                            <!--
-                            Generar elementos li con este formato para agregar menus a la navegación
-                            <li><a href="about.html"><span> About Us </span></a></li>
-                            -->
+                            <li><a id ="btnSec3" href="#seccion3"><span id="tabSec3" class="oculto"> Administrador</span></a></li>
                         </ul>
                     </div>
-
-
                 </div><!-- fin header -->
 
                 <!-- Pagina 1 -->
 
                 <div id="seccion1">
-                    <h2><strong>Nombre de secci&oacute;n</strong></h2><!-- titulo de seccion -->
+                    <h2><strong>Libreria Puro Cuento </strong></h2><!-- titulo de seccion -->
                     <div class="full_width"><!-- div ancho completo -->
                         Div que ocupa todo el ancho, 940px.   Pellentesque dui nisi, malesuada vitae hendrerit sed, 
                         vehicula sit amet dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur 
@@ -60,141 +58,12 @@
                     </div>
                     <!-- div ancho completo -->
 
-                    <div class="main_left"><!-- parte izquierda de div dividido -->
-                        Div sobre la izquierda de 250px de ancho
-
-                        <img src="imagenes/img1.jpg"   alt="descripción de la imagen" />
-
-                    </div><!-- fin div parte izquierda -->
-
-                    <div class="main_right"><!-- parte derecha de div dividido -->
-                        Div sobre la derecha de 680px de ancho
-
-                        <div class="message">
-                            <p><strong>Aviso:</strong> Registro insertado con éxito</p>
-                        </div>
-
-                        <div class="warning">
-                            <p><strong>Aviso:</strong> Cuidado, puede haber errores</p>
-                        </div>
-
-                        <div class="error">
-                            <p><strong>Aviso:</strong> Error al procesar la solicitud</p>
-                        </div>
-
-
-                        <h1>Cabezal H1</h1>
-                        <h2>Cabezal H2</h2>
-                        <h3>Cabezal H3</h3>
-                        <h4>Cabezal H4</h4>
-                        <h5>Cabezal H5</h5>
-                        <h6>Cabezal H6</h6>
-                        <p>Párrafo, sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium mque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                        <table width="600" border="1">
-                            <tr>
-                                <th>Cabezal</th>
-                                <th>Cabezal</th>
-                                <th>Cabezal</th>
-                                <th>Cabezal</th>
-                            </tr>
-                            <tr>
-                                <td>Dato</td>
-                                <td>Dato</td>
-                                <td>Dato</td>
-                                <td>Dato</td>
-                            </tr>
-                            <tr>
-                                <td>Dato</td>
-                                <td>Dato</td>
-                                <td>Dato</td>
-                                <td>Dato</td>
-                            </tr>
-                        </table>
-                        <p>&nbsp;</p>
-
-                        <div class="formulario">
-                            <ol>
-                                <li>
-                                    <label for="nombre">Nombre <span class="red">*</span></label>
-                                    <input name="nombre" class="text" />
-                                    <span class="avisoEnLinea error">Aviso warning</span>
-                                </li>
-
-                                <li>
-                                    <label for="empresa">Empresa</label>
-                                    <input name="empresa" class="text" />
-                                    <span class="avisoEnLinea warning">Aviso warning</span>
-                                </li>
-                                <li>
-                                    <label for="mensaje">Mensaje</label>
-                                    <textarea name="mensaje" class="text" ></textarea>
-                                    <span class="avisoEnLinea message">Aviso warning</span>
-                                </li>
-                                <li class="buttons">
-                                    <input type="button" name="imageField" class="send" value="Enviar Datos" />
-                                    <div class="clr"></div>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <p>&nbsp;</p>
-
-
-                    </div><!-- fin div parte derecha -->
-
-                </div><!-- fin div seccion 1 -->
-
-                <!-- Pagina 2 -->
-
-                <div id="seccion2" class="oculto">
-                    <p> 85528 
-                        58548</p>
-                </div>
-
-                <!-- fin div seccion 2 -->
-
-                <!-- Pagina 3 -->
-                
-              
-                <div id="seccion3" class="oculto">
-                    
-                    <h2><strong>Revistas</strong></h2>
-                    
-                    <!-- TAPA 1 -->
-                    <p> <div class="main_left"><!-- parte izquierda de div dividido -->
-                        <img src="tapas/tapa1--GlamourEspañaMarzo2015.jpg "   title="Glamour España" width="150" height="200" alt="descripción de la imagen" />   
-                        <!-- <li><a href="about.html"><span> About Us </span></a></li> para crear un link-->
-                        </div>
+                    <!-- tapa fija -->     
+                    <p> <div class="main_left">
+                        <img src="tapas/tapa 7 - National Geograhic.jpg "   title=" National Geograhic" width="150" height="200" alt="descripción de la imagen" />                        
+                    </div>
                     <div  class="main_right">
-                        <div>
-                            <ul>
-
-                                <li> Nombre Revista: Glamour España</li>
-                                <li> Fecha: Marzo 2015</li>
-                                <li> País: España</li>
-                                <li> Periodicidad: Mensual</li>
-                                <li> Genero:Moda</li>
-                            </ul>
-
-                        </div> 
-                        <p>       
-                            Glamour la revista para las mujeres apasionadas. Mes a mes te damos las claves para triunfar con estilo, un mundo de posibilidades sólo para ti.
-                            Marcamos tendencia y te decimos qué se lleva cada temporada: los looks más trendy y las prendas indispensables. Además ponemos a tu alcance lo último en belleza,
-                            viajes, celebrities, trabajo, amigos, ocio, gadgets, y mucho más.
-                            En esta edición: Exclusiva Dakota y Jamie el sexo y 50 sombras de Grey. Un look sexy: las 90 tendencias y accesorios que te visten esta primavera.</p>
-                         <div><h3>Precio:$20</h3></div>
-
-                        <input type="button" id="comprar" value="Comprar">
-                    </div>    
-                        <hr width="100%"> <!--Muestra una línea que ocupa todo el ancho de la pagina. http://www2.uca.es/manual-html/saltlin.htm -->
-                        <!-- FIN  TAPA 1 -->
-
-                        <!-- TAPA 2 -->
-                        <p> <div class="main_left">
-                            <img src="tapas/tapa 7 - National Geograhic.jpg "   title=" National Geograhic" width="150" height="200" alt="descripción de la imagen" />                        
-                            </div>
-                    <div  class="main_right">
-                         <div>               
+                        <div>               
                             <ul>
                                 <li> Nombre Revista: National Geograhic</li>
                                 <li> Fecha: Marzo 2015</li>
@@ -203,7 +72,7 @@
                                 <li> Editorial:ET Publishing International, LLC</li>
                                 <li> Genero:Cultura</li>
                             </ul>
-                         </div>
+                        </div>
 
                         <p> 
                             Inspiración para cuidar el planeta.
@@ -214,42 +83,123 @@
 
                         <input type="button" id="comprar2" value="Comprar">
                     </div>
-                     <hr width="100%">
-                     
-                    <!-- FIN  TAPA 2 -->
-                    
-                    <!-- TAPA 3 -->
-                     <p> <div class="main_left"><!-- parte izquierda de div dividido -->
-                         <img src="tapas/tapa2-GQEspañaJunio2015.jpg "   title="GQ España" width="150" height="200" alt="descripción de la imagen" />   
-                        <!-- <li><a href="about.html"><span> About Us </span></a></li> para crear un link-->
-                        </div>
-                    <div  class="main_right">
-                        <div>
-                            <ul>
-
-                                <li> Nombre Revista: GQ España</li>
-                                <li> Fecha: Junio 2015</li>
-                                <li> País: España</li>
-                                <li> Periodicidad: Mensual</li>
-                                <li> Genero:Entretenimiento</li>
-                            </ul>
-
-                        </div> 
-                        <p>       
-                            Descripción Publicación: GQ es la revista más vanguardista que te adelanta las últimas tendencias de moda y belleza masculina. Te descubrimos el lado más sexy de las mujeres más bellas y te anticipamos las últimas novedades en el terreno del ocio y la cultura. En GQ conocerás todo lo que un hombre debe saber.
-                            En esta edición: Los 30 mejores (y peores) finales de la historia de la TV. A proposito de Jon Hamm Don Draper y el ultimo capitulo de Mad Men.</p>
-                         <div><h3>Precio:$20</h3></div>
-
-                         <input type="button" id="comprar3" value="Comprar">
-                    </div>
-                    
                     <hr width="100%">
-                 
-                 <!-- FIN  TAPA 3 -->
+
+                    <div id="mostrarLibro">
+                    </div><!-- fin div mostrar libro -->
+
+                    <!--
+                                        <div class="main_right"> parte derecha de div dividido 
+                                            Div sobre la derecha de 680px de ancho
                     
+                                            <div class="message" id=agregadoExito>
+                                                <p><strong>Aviso:</strong> Registro insertado con éxito</p>
+                                            </div>
+                    
+                                            <div class="warning">
+                                                <p><strong>Aviso:</strong> Cuidado, puede haber errores</p>
+                                            </div>
+                    
+                                            <div class="error">
+                                                <p><strong>Aviso:</strong> Error al procesar la solicitud</p>
+                                            </div>
+                    -->
+                </div><!-- fin div seccion 1 -->
+
+                <!-- Pagina 2 -->
+
+                <div id="seccion2" class="oculto">
+                    <br>
+                    <br>
+                    <br>
+                    aslkjfdsdf asdfjklasjdf klj aa                    
                 </div>
 
-                <!-- fin div seccion 3 -->
+                <!-- fin div seccion 2 -->
+
+                <!-- Pagina 3 -->
+
+                <div id="seccion3" class="oculto">
+                    <br/>
+                    <br/>
+                    <div class="menu">
+                        <ul >
+                            <!-- el atributo class con valor active marca la selección de la sección actual -->
+                            <li><a id ="btnLibro" href="#nuevoLibro" class="active"><span>Alta Libro</span></a></li>
+                            <li><a id ="btnRevista" href="#nuevaRevista" ><span  id="revista" >Alta Revista</span></a></li>
+
+                        </ul>
+                    </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                <!-- libro -->
+                    <div id="nuevoLibro" class="active">
+
+                       
+                        <h4><strong> Alta de Libros </strong></h4>
+
+
+                        <div class="formulario">
+                            <ol>
+                                <li>
+                                    <label id = "tituloLb" >Título </label>
+                                    <input id="titulo" class="text" />
+
+                                </li>
+
+                                <li>
+                                    <label id = "autorLb" >Autor </label>
+                                    <input id="autor" class="text" />
+
+                                </li>
+
+                                <li>
+                                    <label id ="descripcionLb">Descripci&oacuten:</label>
+                                    <input id="descripcion" class="text" />
+
+                                </li>
+
+                                <li>
+                                    <label id ="precioLb">Precio:</label>
+                                    <input id="precio" class="text" />
+                                </li>
+
+                                <li>
+                                    <label id ="stockLb">Stock:</label>
+                                    <input id="stock" class="text" />
+                                </li>
+
+                                <li>
+                                    <label id ="estadoLb">Estado:</label>
+                                    <div>
+                                        <select id="estado">
+                                            <option value="Habilitado">Habilitado</option>
+                                            <option value="Deshabilitado">Deshabilitado</option>
+                                        </select>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <label id="imagenLb">Caratula</label>   
+                                    <input type="file" id="imagen">
+                                </li>
+
+
+                                <li class="buttons">
+                                    <input id='btnAgregar' type="button" name="imageField"  value="Agregar" />
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    </div>
+                <!-- fin libro -->
+
+                    <div id="nuevaRevista" class="oculto" >
+                        safs
+
+                    </div>
+                </div>
 
             </div>
             <div class="footer"><!-- pie -->
@@ -260,10 +210,7 @@
                         <a href="#">Secci&oacute;n 2</a> | 
                         <a href="#">Secci&oacute;n 3 </a>
                     </p>
-
-
                 </div>
-
             </div><!-- fin pie -->
         </div><!-- fin div fix ie8 -->
     </body>

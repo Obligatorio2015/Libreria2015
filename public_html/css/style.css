@@ -95,7 +95,7 @@ html {
     display:none;
 }
 
-/* centrado de p√°gina, ancho de 960 px*/
+/* centrado de p·gina, ancho de 960 px*/
 .main_resize {
     margin:0 auto;
     padding:0 10px;
@@ -350,7 +350,7 @@ input[type=button], input[type=submit] {
     margin:10px 0 0 0;
     border:1px solid #e8e8e8;
     color:#FFF;
-    float:left;
+    float: none;
     cursor:pointer;
     background-color:#06C;
 }
