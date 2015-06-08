@@ -32,7 +32,7 @@
 
                             <input type="button" id= "botonLogin" value="Ingresar">
                         </div>
-                        <div id="bienvenido" class="oculto"></div>
+                        <div id="bienvenido" class="oculto" style=" font-size:13px;"></div>
                     </div>
                     <div class="menu">
                         <ul >
@@ -86,10 +86,8 @@
                     <hr width="100%">
 
                     <div id="mostrarLibro">
+                       
                         
-                       <!--   <div class="message" id=agregadoExito>
-                      <p><span id="alertaExito"><strong>Aviso:</strong> Registro insertado con éxito</p>
-                        </div>
                     </div><!-- fin div mostrar libro -->
 
                     <!--
@@ -108,7 +106,9 @@
                                                 <p><strong>Aviso:</strong> Error al procesar la solicitud</p>
                                             </div>
                     -->
-                </div><!-- fin div seccion 1 -->
+                    </div>
+                </div>
+              <!-- fin div seccion 1 -->
 
                 <!-- Pagina 2 -->
 
@@ -143,35 +143,35 @@
                        
                         <h4><strong> Alta de Libros </strong></h4>
 
-
+                    <form>
                         <div class="formulario">
                             <ol>
                                 <li>
                                     <label id = "tituloLb" >Título </label>
-                                    <input id="titulo" class="text" />
+                                    <input id="titulo" class="text" required/>
 
                                 </li>
 
                                 <li>
                                     <label id = "autorLb" >Autor </label>
-                                    <input id="autor" class="text" />
+                                    <input id="autor" class="text" required/>
 
                                 </li>
 
                                 <li>
                                     <label id ="descripcionLb">Descripci&oacuten:</label>
-                                    <input id="descripcion" class="text" />
+                                    <input id="descripcion" class="text" required/>
 
                                 </li>
 
                                 <li>
                                     <label id ="precioLb">Precio:</label>
-                                    <input id="precio" class="text" />
+                                    <input id="precio" class="text" onkeypress="return soloNumeros(event)"  required />
                                 </li>
 
                                 <li>
                                     <label id ="stockLb">Stock:</label>
-                                    <input id="stock" class="text" />
+                                    <input id="stock" class="text"  onkeypress="return soloNumeros(event)"  />
                                 </li>
 
                                 <li>
@@ -186,15 +186,22 @@
 
                                 <li>
                                     <label id="imagenLb">Caratula</label>   
-                                    <input type="file" id="imagen">
+                                    <input type="file" id="imagen" required>
                                 </li>
 
 
                                 <li class="buttons">
-                                    <input id='btnAgregar' type="button" name="imageField"  value="Agregar" />
+                                    <input id='btnAgregar' type="submit" name="imageField"  value="Agregar" />
                                 </li>
                             </ol>
                         </div>
+                    </form>  
+                       
+                        <div class="message oculto" id="exito" >
+                            <p><span id="alertaExito"><strong>Aviso:</strong> El libro se ha ingresado con éxito</span></p>
+                        </div>
+                        <div class="error oculto" id="errorId">
+                           <div id="errorAlert"></div></div>
                     </div>
                     </div>
                 <!-- fin libro -->
@@ -203,7 +210,7 @@
                         safs
 
                     </div>
-                </div>
+             
 
             </div>
             <div class="footer"><!-- pie -->
