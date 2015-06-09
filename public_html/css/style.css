@@ -32,6 +32,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    font-family: fantasy;
+    font-size: 110%;
 }
 ol, ul {
     list-style: none;
@@ -79,6 +81,7 @@ body {
     background:#f2f2f2;
     font: normal 11px Arial, Helvetica, sans-serif;
     color:#7e7e7e;
+    background-image: url("../imagenes/backgrounds23-1.jpg")
 }
 html {
     padding:0;
@@ -95,7 +98,7 @@ html {
     display:none;
 }
 
-/* centrado de página, ancho de 960 px*/
+/* centrado de pï¿½gina, ancho de 960 px*/
 .main_resize {
     margin:0 auto;
     padding:0 10px;
@@ -104,6 +107,9 @@ html {
     border-left:1px solid #ececec;
     border-bottom:1px solid #ececec;
     background:#fff;
+    background-image: url("../imagenes/backgrounds23-1.jpg")
+   
+    
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -188,6 +194,7 @@ th, td{
 .main_left {
     width:250px;
     float:left;
+   
     padding:0 0 0 10px;
     margin:0;
 }
@@ -205,6 +212,7 @@ th, td{
     padding:0 0 10px 0;
     margin:0 auto;
     border-bottom:1px solid #dfdfdf;
+    background-image: url("../tapas/backgrounds23-1.jpg")
 }
 /* logo */
 .logo {
@@ -221,7 +229,7 @@ th, td{
     margin-top:5px;
 }
 
-#login input[type="text"]
+#login input[type="text"] input [type="password"]
 {
     width:95%;
 }
@@ -254,7 +262,7 @@ th, td{
     text-decoration:none;
 }
 .menu ul li a:hover {
-    background: #dfdfdf;
+    background: #DBCC63;
 }
 .menu ul li a.active {
     background: #dfdfdf;
@@ -345,6 +353,15 @@ th, td{
     background:#f8f8f8;
     float:left;
 }
+.btnBuscar {
+    padding:3px 10px;
+    margin:5px 0 0 0;
+    border:1px solid #e8e8e8;
+    color:#FFF;
+    float: none;
+    cursor:pointer;
+    background-color:#06C;
+}
 input[type=button], input[type=submit] {
     padding:10px 10px;
     margin:10px 0 0 0;
@@ -354,6 +371,8 @@ input[type=button], input[type=submit] {
     cursor:pointer;
     background-color:#06C;
 }
+
+
 /* footer */
 .footer {
     padding:5px 0;

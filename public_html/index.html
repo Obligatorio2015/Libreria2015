@@ -7,12 +7,12 @@
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="jquery.js"></script>
         <script type="text/javascript" src="PuroCuento.js"></script> 
-
-    
-    </head>
+        <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
+   </head>
     
     <body>
-   
+               
         <!--/<div class="main"> fix para ie8 -->
         <div class="main_resize clearfix"><!-- sitio completo -->
             <div class="header clearfix"><!-- cabezal -->
@@ -37,9 +37,9 @@
                     <div class="menu">
                         <ul >
                             <!-- el atributo class con valor active marca la selección de la sección actual -->
-                            <li><a id ="btnSec1" href="#seccion1" class="active"><span>Inicio</span></a></li>
-                            <li><a id ="btnSec2" href="#seccion2" ><span  id="tabSec2" >Secci&oacute;n 2</span></a></li>
-                            <li><a id ="btnSec3" href="#seccion3"><span id="tabSec3" class="oculto"> Administrador</span></a></li>
+                            <li><a id ="btnSec1" href="#seccion1" class="active" onclick="limpiarAlertas()"><span>Inicio</span></a></li>
+                            <li><a id ="btnSec2" href="#seccion2" onclick="limpiarAlertas()"><span  id="tabSec2" >Secci&oacute;n 2</span></a></li>
+                            <li><a id ="btnSec3" href="#seccion3" onclick="limpiarAlertas()" ><span id="tabSec3" class="oculto"> Administrador</span></a></li>
                         </ul>
                     </div>
                 </div><!-- fin header -->
@@ -49,12 +49,13 @@
                 <div id="seccion1">
                     <h2><strong>Libreria Puro Cuento </strong></h2><!-- titulo de seccion -->
                     <div class="full_width"><!-- div ancho completo -->
-                        Div que ocupa todo el ancho, 940px.   Pellentesque dui nisi, malesuada vitae hendrerit sed, 
+                        <p> Div que ocupa todo el ancho, 940px.   Pellentesque dui nisi, malesuada vitae hendrerit sed, 
                         vehicula sit amet dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur 
                         ridiculus mus. Quisque pharetra, neque id mattis placerat, nulla orci commodo lectus, vitae tincidunt 
                         velit lacus at nisi. Quisque fermentum fermentum tellus sit amet ultrices. Donec vitae erat quis 
                         dolor mattis mollis id vel nisi. In scelerisque venenatis adipiscing. Pellentesque scelerisque erat 
                         a tortor consectetur suscipit dictum est tincidunt. Proin vitae interdum felis.  
+                        </p>
                     </div>
                     <!-- div ancho completo -->
 
@@ -80,8 +81,15 @@
                             Ofrece artículos que narran la belleza, el misterio y las crudas realidades de la vida en la tierra. 
                             Por 125 años ha sido un medio de información preciso y esto lo ha convertido en una de las mejores fuentes de consulta del mundo.</p>
                         <div><h3>Precio:$50</h3></div>
-
+                        
+                        <div id="ocultarComprar" class="oculto">
+                        <label  id ="cantLb">Cantidad  </label>
+                        <select  id="cantidad" >
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
                         <input type="button" id="comprar2" value="Comprar">
+                        </div>
                     </div>
                     <hr width="100%">
 
@@ -107,7 +115,7 @@
                                             </div>
                     -->
                     </div>
-                </div>
+                
               <!-- fin div seccion 1 -->
 
                 <!-- Pagina 2 -->
@@ -129,8 +137,8 @@
                     <div class="menu">
                         <ul >
                             <!-- el atributo class con valor active marca la selección de la sección actual -->
-                            <li><a id ="btnLibro" href="#nuevoLibro" class="active"><span>Alta Libro</span></a></li>
-                            <li><a id ="btnRevista" href="#nuevaRevista" ><span  id="revista" >Alta Revista</span></a></li>
+                            <li><a id ="btnLibro" href="#nuevoLibro" class="active" onclick="limpiarAlertas()"><span>Libro</span></a></li>
+                            <li><a id ="btnRevista" href="#nuevaRevista" onclick="limpiarAlertas()" ><span  id="revista" >Revista</span></a></li>
 
                         </ul>
                     </div>
@@ -139,72 +147,163 @@
                     <br/>
                 <!-- libro -->
                     <div id="nuevoLibro" class="active">
+                        <br>
+                        <label id ="accionesLb">Acción  </label>
+                        <select id="acciones" onclick="limpiarAlertas()" onchange="cambiarAccion()" >
+                            <option value="Alta">Alta</option>
+                            <option value="Modificar">Modificar</option>
+                        </select>
+                        
+                        <br>
+                        <br>
+                        <div id="altaLibro">
+                            
+                            <h4><strong> Alta de Libros </strong></h4>
+                            <form>
+                                <div class="formulario">
+                                    <ol>
+                                        <li>
+                                            <label id = "codLibroLb" >Código </label>
+                                            <input id="codLibro" class="text"  onkeypress="return soloNumeros(event)" required/>
 
-                       
-                        <h4><strong> Alta de Libros </strong></h4>
+                                        </li>
 
-                    <form>
-                        <div class="formulario">
-                            <ol>
-                                <li>
-                                    <label id = "tituloLb" >Título </label>
-                                    <input id="titulo" class="text" required/>
+                                        <li>
+                                            <label id = "tituloLb" >Título </label>
+                                            <input id="titulo" class="text" required/>
 
-                                </li>
+                                        </li>
 
-                                <li>
-                                    <label id = "autorLb" >Autor </label>
-                                    <input id="autor" class="text" required/>
+                                        <li>
+                                            <label id = "autorLb" >Autor </label>
+                                            <input id="autor" class="text" required/>
 
-                                </li>
+                                        </li>
 
-                                <li>
-                                    <label id ="descripcionLb">Descripci&oacuten:</label>
-                                    <input id="descripcion" class="text" required/>
+                                        <li>
+                                            <label id ="descripcionLb">Descripci&oacuten:</label>
+                                            <input id="descripcion" class="text" required/>
 
-                                </li>
+                                        </li>
 
-                                <li>
-                                    <label id ="precioLb">Precio:</label>
-                                    <input id="precio" class="text" onkeypress="return soloNumeros(event)"  required />
-                                </li>
+                                        <li>
+                                            <label id ="precioLb">Precio:</label>
+                                            <input id="precio" class="text" onkeypress="return soloNumeros(event)"  required />
+                                        </li>
 
-                                <li>
-                                    <label id ="stockLb">Stock:</label>
-                                    <input id="stock" class="text"  onkeypress="return soloNumeros(event)"  />
-                                </li>
+                                        <li>
+                                            <label id ="stockLb">Stock:</label>
+                                            <input id="stock" class="text"  onkeypress="return soloNumeros(event)"  />
+                                        </li>
 
-                                <li>
-                                    <label id ="estadoLb">Estado:</label>
-                                    <div>
-                                        <select id="estado">
-                                            <option value="Habilitado">Habilitado</option>
-                                            <option value="Deshabilitado">Deshabilitado</option>
-                                        </select>
-                                    </div>
-                                </li>
+                                        <li>
+                                            <label id ="estadoLb">Estado:</label>
+                                            <div>
+                                                <select id="estado">
+                                                    <option value="Habilitado">Habilitado</option>
+                                                    <option value="Deshabilitado">Deshabilitado</option>
+                                                </select>
+                                            </div>
+                                        </li>
 
-                                <li>
-                                    <label id="imagenLb">Caratula</label>   
-                                    <input type="file" id="imagen" required>
-                                </li>
+                                        <li>
+                                            <label id="imagenLb">Caratula</label>   
+                                            <input type="file" id="imagen" required>
+                                        </li>
 
 
-                                <li class="buttons">
-                                    <input id='btnAgregar' type="submit" name="imageField"  value="Agregar" />
-                                </li>
-                            </ol>
+                                        <li class="buttons">
+                                            <input id='btnAgregar'  type="submit" name="imageField"  value="Agregar" />
+                                        </li>
+                                    </ol>
+                                </div>
+                            </form>  
                         </div>
-                    </form>  
+                      <!-- modificar --> 
+                      
+                      <div id="modificarLibro" class="oculto">
+                            
+                            <h4><strong> Modificar Libros </strong></h4>
+                            <div style=" text-align: right; margin-right: 27%">
+                                <input id="BusLibro" class="text" placeholder="Buscar"/>
+                                <input id='btnBusLib' type="button" onclick="limpiarAlertas()" name="imageField" style="padding:3px 10px;"  value="Buscar" />
+                            </div>
+                            <form>
+                                <div class="formulario">
+                                    <ol>
+                                        <li>
+                                            <label id = "codModLibroLb" >Código </label>
+                                            <input id="codModLib" class="text"  onkeypress="return soloNumeros(event)" required/>
+
+                                        </li>
+
+                                        <li>
+                                            <label id = "tituloModLb" >Título </label>
+                                            <input id="tituloModLib" class="text" required/>
+
+                                        </li>
+
+                                        <li>
+                                            <label id = "autorModLb" >Autor </label>
+                                            <input id="autorModLib" class="text" required/>
+
+                                        </li>
+
+                                        <li>
+                                            <label id ="descripcionModLb">Descripci&oacuten:</label>
+                                            <input id="descripcionModLib" class="text" required/>
+
+                                        </li>
+
+                                        <li>
+                                            <label id ="precioModLb">Precio:</label>
+                                            <input id="precioModLib" class="text" onkeypress="return soloNumeros(event)"  required />
+                                        </li>
+
+                                        <li>
+                                            <label id ="stockModLb">Stock:</label>
+                                            <input id="stockModLib" class="text"  onkeypress="return soloNumeros(event)"  />
+                                        </li>
+
+                                        <li>
+                                            <label id ="estadoModLb">Estado:</label>
+                                            <div>
+                                                <select id="estadoModLib">
+                                                    <option value="Habilitado">Habilitado</option>
+                                                    <option value="Deshabilitado">Deshabilitado</option>
+                                                </select>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <label id="imagenModLb">Caratula</label>   
+                                            <input type="file" id="imagenModLib" >
+                                        </li>
+
+
+                                        <li class="buttons">
+                                            <input id='btnModLib' type="submit" name="imageField"  value="Modificar" />
+                                            <input id='btnEliLib' type="submit" name="imageField"  value="Eliminar" onclick="eliminarLibro()"/>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </form>  
+                        </div>
+                      
+                       <!-- FIN modificar -->  
+                        
                        
                         <div class="message oculto" id="exito" >
-                            <p><span id="alertaExito"><strong>Aviso:</strong> El libro se ha ingresado con éxito</span></p>
-                        </div>
+                            <div  id="alertaExito"></div></div>
+                            
                         <div class="error oculto" id="errorId">
                            <div id="errorAlert"></div></div>
                     </div>
                     </div>
+                
                 <!-- fin libro -->
+                
+                
 
                     <div id="nuevaRevista" class="oculto" >
                         safs
@@ -215,11 +314,11 @@
             </div>
             <div class="footer"><!-- pie -->
                 <div class="footer_resize clearfix">
-                    <p class="left">Nombre de la App
-                        <a href="#"><br />
+                    <p class="left">Libreria Puro Cuento
+                        <a href="#seccion1" ><br />
                             Secci&oacute;n 1</a> | 
-                        <a href="#">Secci&oacute;n 2</a> | 
-                        <a href="#">Secci&oacute;n 3 </a>
+                        <a id ="btnSecpie2" href="#seccion2">Secci&oacute;n 2</a> | 
+                        <a href="#seccion3">Secci&oacute;n 3 </a>
                     </p>
                 </div>
             </div><!-- fin pie -->
